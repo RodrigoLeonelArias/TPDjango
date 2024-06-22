@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    
+    <h1>DETALLES DE PRODUCTOS</h1>
+
+    
+    {% if detalle.producto %}
+        <img src="{{detalle.producto.url}}" alt="">
+    {% else %}
+        <img src="{% static 'img/avatar.png' %}" alt="">
+    {% endif %}
+
+
+    <h2>Datos:</h2>
+<ul>
+
+    <li> Nombre: {{detalle.nombre}}</li>
+    <li> Precio: {{detalle.precio}}</li>
+    <li> Stock: {{detalle.stock}}</li>
+    <li> Tipo: {{detalle.Tipo_de_Producto.nombres}}</li>
+
+
+</ul>
+
+
+
+{% endblock content %}
+    

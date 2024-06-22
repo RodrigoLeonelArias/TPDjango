@@ -1,0 +1,27 @@
+
+{% block content %}
+    
+<form method="GET">
+
+    <input type="text" placeholder="Nombres" id="kword" name="kword">
+    <input type="submit" value="Buscar">
+
+
+
+</form>
+     
+
+    <ul>
+        
+        {% for datoProducto in datoProductos %}
+            <li>{{buscar.nombre}}:{{buscar.precio}}</li>
+        {% endfor %}
+        
+
+
+
+    </ul>
+
+
+{% endblock content %}
+    
